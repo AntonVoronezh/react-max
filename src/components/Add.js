@@ -22,7 +22,9 @@ class Add extends React.Component {
       const { id, value } = e.currentTarget;
       this.setState({ [id]: value });
     };
-
+    handleCheckboxChange = e => {
+      this.setState({ agree: e.currentTarget.checked });
+    };
 
 
   }
