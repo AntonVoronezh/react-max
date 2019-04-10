@@ -32,7 +32,46 @@ class Add extends React.Component {
       }
       return false;
     };
-
+    render() {
+      const { name, text, bigText } = this.state;
+      return (
+        <form className="add">
+          <input
+            id="name"
+            type="text"
+            onChange={this.handleChange}
+            className="add__author"
+            placeholder="Ваше имя"
+            value={name}
+          />
+          <textarea
+            id="text"
+            onChange={this.handleChange}
+            className="add__text"
+            placeholder="Текст новости"
+            value={text}
+          />
+          <textarea
+            id="bigText"
+            onChange={this.handleChange}
+            className="add__text"
+            placeholder="Текст новости подробно"
+            value={bigText}
+          />
+          <label className="add__checkrule">
+            <input type="checkbox" onChange={this.handleCheckboxChange} /> Я
+            согласен с правилами
+          </label>
+          <button
+            className="add__btn"
+            onClick={this.onBtnClickHandler}
+            disabled={!this.validate()}
+          >
+            Показать alert
+          </button>
+        </form>
+      );
+    }
   }
   
 
