@@ -74,6 +74,8 @@ class Add extends React.Component {
     }
   }
   
-
+  Add.propTypes = {
+    onAddNews: PropTypes.func.isRequired
+  };
 
 export { Add };
