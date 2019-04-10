@@ -27,7 +27,10 @@ class App extends React.Component {
       });
   }
 
-
+  handleAddNews = data => {
+    const nextNews = [data, ...this.state.news];
+    this.setState({ news: nextNews });
+  };
   
 }
 
