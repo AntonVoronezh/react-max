@@ -18,7 +18,10 @@ class Add extends React.Component {
         bigText
       });
     };
-
+    handleChange = e => {
+      const { id, value } = e.currentTarget;
+      this.setState({ [id]: value });
+    };
 
 
 
