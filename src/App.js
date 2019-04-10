@@ -10,7 +10,22 @@ class App extends React.Component {
     isLoading: false
   };
 
+  componentDidMount() {
+    this.setState({ isLoading: true });
 
+    fetch("http://localhost:3000/data/newsData.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        // console.log(this)
+        // console.log('приехали данные ', data)
+        setTimeout(() => {
+          // добавили задержку
+          this.setState({ isLoading: false, news: data });
+        }, 3000);
+      });
+  }
 
 
   
