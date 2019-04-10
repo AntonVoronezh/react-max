@@ -25,7 +25,13 @@ class Add extends React.Component {
     handleCheckboxChange = e => {
       this.setState({ agree: e.currentTarget.checked });
     };
-
+    validate = () => {
+      const { name, text, agree } = this.state;
+      if (name.trim() && text.trim() && agree) {
+        return true;
+      }
+      return false;
+    };
 
   }
   
