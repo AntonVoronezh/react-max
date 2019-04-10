@@ -8,7 +8,16 @@ class Add extends React.Component {
       bigText: "",
       agree: false
     };
-
+    onBtnClickHandler = e => {
+      e.preventDefault();
+      const { name, text, bigText } = this.state;
+      this.props.onAddNews({
+        id: +new Date(),
+        author: name,
+        text,
+        bigText
+      });
+    };
 
 
 
