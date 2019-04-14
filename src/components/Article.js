@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from 'prop-types'
 
 class Article extends React.Component {
-
+    state = {
+      visible: false
+    };
 
     render() {
       const { author, text, bigText } = this.props.data;
