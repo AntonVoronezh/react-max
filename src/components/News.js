@@ -51,7 +51,14 @@ class News extends React.Component {
   render() {
     const { filteredNews } = this.state;
     return (
-
+      <div className="news">
+        {this.renderNews()}
+        {filteredNews.length ? (
+          <strong className={"news__count"}>
+            Всего новостей: {filteredNews.length}
+          </strong>
+        ) : null}
+      </div>
     );
   }
 }
