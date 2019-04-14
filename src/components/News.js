@@ -10,7 +10,13 @@ class News extends React.Component {
   static getDerivedStateFromProps(props, state) {
     console.log(props);
     console.log(state);
-
+    let nextFilteredNews = [...props.data]; // было nextProps - переименовали
+    nextFilteredNews.forEach((item, index) => {
+      if (item.bigText.toLowerCase().indexOf("pubg") !== -1) {
+        item.bigText = "СПАМ";
+      }
+    });
+ 
   }
 
   // componentWillReceiveProps(nextProps) {
