@@ -37,7 +37,12 @@ class News extends React.Component {
   // }
 
   renderNews = () => {
-   
+    const { filteredNews } = this.state;
+    let newsTemplate = null;
+    if (filteredNews.length) {
+      newsTemplate = filteredNews.map(function(item) {
+        return <Article key={item.id} data={item} />;
+      });
     } else {
       newsTemplate = <p>К сожалению новостей нет</p>;
     }
