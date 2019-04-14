@@ -31,6 +31,13 @@ class Article extends React.Component {
     }
   }
 
-
+  Article.propTypes = {
+    data: PropTypes.shape({
+      id: PropTypes.number.isRequired, 
+      author: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      bigText: PropTypes.string.isRequired
+    })
+  };
 
   export { Article };
