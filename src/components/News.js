@@ -16,7 +16,10 @@ class News extends React.Component {
         item.bigText = "СПАМ";
       }
     });
- 
+    return {
+      // возвращаем новое состояние
+      filteredNews: nextFilteredNews
+    };
   }
 
   // componentWillReceiveProps(nextProps) {
