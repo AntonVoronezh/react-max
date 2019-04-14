@@ -62,4 +62,8 @@ class News extends React.Component {
     );
   }
 }
+News.propTypes = {
+  data: PropTypes.array.isRequired
+};
 
+export { News };
