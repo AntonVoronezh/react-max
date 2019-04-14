@@ -5,6 +5,7 @@ class Article extends React.Component {
 
 
     render() {
+      const { author, text, bigText } = this.props.data;
       const { visible } = this.state;
       return (
         <div className="article">
