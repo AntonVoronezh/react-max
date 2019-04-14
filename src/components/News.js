@@ -7,6 +7,11 @@ class News extends React.Component {
     filteredNews: this.props.data
   };
 
+  static getDerivedStateFromProps(props, state) {
+    console.log(props);
+    console.log(state);
+
+  }
 
   // componentWillReceiveProps(nextProps) {
   //   // console.log({ nextProps })
