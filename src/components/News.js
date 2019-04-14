@@ -36,7 +36,13 @@ class News extends React.Component {
   //   this.setState({ filteredNews: nextFilteredNews });
   // }
 
-
+  renderNews = () => {
+   
+    } else {
+      newsTemplate = <p>К сожалению новостей нет</p>;
+    }
+    return newsTemplate;
+  };
   render() {
     const { filteredNews } = this.state;
     return (
