@@ -5,7 +5,10 @@ class Article extends React.Component {
     state = {
       visible: false
     };
-
+    handleReadMoreClck = e => {
+      e.preventDefault();
+      this.setState({ visible: true });
+    };
     render() {
       const { author, text, bigText } = this.props.data;
       const { visible } = this.state;
